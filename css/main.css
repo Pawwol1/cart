@@ -6,6 +6,7 @@
   --mainGrey: #ececec;
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
+  --mainRadius: 0.5rem;
 }
 
 * {
@@ -60,5 +61,42 @@ body {
   padding: 0 5px;
   border-radius: 30%;
   color: var(--mainWhite);
+}
+
+.hero {
+  min-height: calc(100vh - 60px);
+  background: url("../images/hero-bcg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .banner {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--mainRadius);
+  display: inline-block;
+  padding: 2rem;
+}
+.hero .banner .banner-title {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+}
+.hero .banner .banner-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryColor);
+  border-radius: var(--mainRadius);
+  color: var(--mainBlack);
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.hero .banner .banner-btn:hover {
+  background: transparent;
+  color: var(--primaryColor);
 }
 /*# sourceMappingURL=main.css.map */
