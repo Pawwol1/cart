@@ -97,6 +97,13 @@ body {
     color: var(--primaryColor);
   }
 }
+a {
+  text-decoration: none;
+  color: var(--mainBlack);
+  &:hover {
+    color: var(--primaryColor);
+  }
+}
 
 .products {
   padding: 4rem 0;
