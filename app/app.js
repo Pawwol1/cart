@@ -19,8 +19,7 @@ class Products {
             products = products.map(item => {
                 const { title, price } = item.fields;
                 const { id } = item.sys;
-                const image = item.fields.image.fields.file.url;
-                return { title, price, id, image };
+                return { title, price, id };
             });
             console.log(products);
             return products;
@@ -38,7 +37,7 @@ class UI {
            result += `
             <article class="product">
         <div class="img-container">
-          <img src=${product.image} class="product-img" alt="product-img">
+          <img src="../images/default-product.png" class="product-img" alt="product-img">
           <button class="bag-btn" data-id=${product.id}>
             <i class="fas fa-shopping-cart">&nbspDodaj do koszyka</i>
           </button>
@@ -91,7 +90,7 @@ class UI {
     addCartItem(item) {
         const div = document.createElement('div');
         div.classList.add("cart-item");
-        div.innerHTML = `<img src=${item.image} alt="product">
+        div.innerHTML = `<img src="../images/default-product.png" alt="product">
           <div>
             <h4>${item.title}</h4>
             <h5>$${item.price}</h5>
